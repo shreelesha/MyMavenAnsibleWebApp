@@ -4,10 +4,10 @@ pipeline {
     environment {
         LANG = 'en_US.UTF-8'
         LC_ALL = 'en_US.UTF-8'
-    }   // this has to be added only if you get an error saying UTF required is 8 but showing in ISO00009
+    }   
 
     tools {
-        maven 'Maven'  // Ensure this matches the name configured in Jenkins
+        maven 'Maven'  
     }
     stages {
         stage('Checkout') {
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'  // Run Maven build
+                sh 'mvn clean package'  
             }
         }
 
